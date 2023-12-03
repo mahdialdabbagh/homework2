@@ -7,29 +7,39 @@ using System.Threading.Tasks;
 namespace homework_2
 {
 
+
     class Customer
     {
-
-
-
+        // Private fields
         private string name;
+        private string address;
 
-        private string adress;
-
-
-        public Customer(string aname, string aadress)
+        // Constructor
+        public Customer(string aName, string aAddress)
         {
-
-
-            name = aname;
-
-            adress = aadress;
-
-
-
-
-
-
+            name = aName;
+            address = aAddress;
         }
 
+        // Public property for Name
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+
+        // Public property for Address
+        public string Address
+        {
+            get { return address; }
+            set { address = value; }
+        }
+
+        // Additional method (example)
+        public void DisplayInfo()
+        {
+            Console.WriteLine($"Customer: {Name}\nAddress: {Address}");
+        }
     }
+
+}
